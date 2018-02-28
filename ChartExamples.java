@@ -1,14 +1,11 @@
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.Orientation;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.stage.Stage;
 
-import javax.activation.DataSource;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -158,8 +155,7 @@ public class ChartExamples extends Application {
         yAxis.setLabel("Population");
 
         Scene scene = new Scene(barChart, 800, 600);
-        barChart.getData().addAll(series1, series2,
-                series3, series4, series5, series6);
+        barChart.getData().addAll(series1, series2,series3, series4, series5, series6);
         stage.setScene(scene);
         stage.show();
     }
