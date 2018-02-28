@@ -1,10 +1,11 @@
 # vizualization
 примеры визуализации чего-либо  
 ChartExamples.java - различные графики:  
->simpleIndexChart(stage) - линия  
->simpleBarChartByCountry(stage) - бар по одному параметру  
->simpleBarChartByYear(stage) - бар по другому параметру  
->stackedGraphExample(stage) - столбик в одну колонну набивающий  
->pieChartSample(stage) - кроговая диаграмма  
->sampleScatterChart(stage) - диаграмма точек(рассеяния)  
->histogramSample(stage) - пример гистограмы  
+>simpleIndexChart - линия  
+>simpleBarChartByCountry - бар по одному параметру  
+>simpleBarChartByYear - бар по другому параметру  
+>stackedGraphExample - столбик в одну колонну набивающий  
+>pieChartSample - кроговая диаграмма  
+>sampleScatterChart - диаграмма точек(рассеяния)  
+>histogramSample - пример гистограмы  
+>sampleBubbleChart - пузрьковая диаграма  
