@@ -1,12 +1,16 @@
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Orientation;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.stage.Stage;
 
+import javax.activation.DataSource;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 
 public class ChartExamples extends Application {
@@ -40,7 +44,8 @@ public class ChartExamples extends Application {
         //simpleBarChartByYear(stage);
         //stackedGraphExample(stage);
         //pieChartSample(stage);
-        sampleScatterChart(stage);
+        //sampleScatterChart(stage);
+        histogramSample(stage);
     }
 
     public void simpleIndexChart (Stage stage) {
@@ -246,6 +251,47 @@ public class ChartExamples extends Application {
         scatterChart.getData().addAll(series);
 
         Scene scene = new Scene(scatterChart, 500, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void histogramSample(Stage stage) {
+        final CategoryAxis xAxis = new CategoryAxis();
+        final NumberAxis yAxis = new NumberAxis();
+
+        String[] gr = {"-4","-3","-2","-1","0","1","2","3","4"};
+        int[] count = new int[9];
+        for(int i = 0; i < 9; i++) count[i] = 0;
+
+        Random random = new Random();
+        for (int i = 0; i < 1000; i++) {
+            Double r = random.nextGaussian();
+            //System.out.println(r);
+            if(r < -4) count[0]++;
+            else if(r < -3) count[1]++;
+            else if(r < -2) count[2]++;
+            else if(r < -1) count[3]++;
+            else if(r < 0) count[4]++;
+            else if(r < 1) count[5]++;
+            else if(r < 2) count[6]++;
+            else if(r < 3) count[7]++;
+            else count[8]++;
+        }
+
+        series1.setName("random.nextGaussian()");
+        for(int i = 0; i<9; i++){
+            addDataItem(series1, gr[i], count[i]);
+        }
+
+        stage.setTitle("Histogram Example");
+        final BarChart<String, Number> barChart
+                = new BarChart<>(xAxis, yAxis);
+        barChart.setTitle("Histogram");
+        xAxis.setLabel("Value");
+        yAxis.setLabel("Amount");
+
+        Scene scene = new Scene(barChart, 800, 600);
+        barChart.getData().addAll(series1);
         stage.setScene(scene);
         stage.show();
     }
