@@ -8,4 +8,4 @@ ChartExamples.java - различные графики:
 >pieChartSample - кроговая диаграмма  
 >sampleScatterChart - диаграмма точек(рассеяния)  
 >histogramSample - пример гистограмы  
->sampleBubbleChart - пузрьковая диаграма  
+>sampleBubbleChart - пузырьковая диаграма  
