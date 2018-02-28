@@ -7,3 +7,4 @@ ChartExamples.java - различные графики:
 >stackedGraphExample(stage) - столбик в одну колонну набивающий  
 >pieChartSample(stage) - кроговая диаграмма  
 >sampleScatterChart(stage) - диаграмма точек(рассеяния)  
+>histogramSample(stage) - пример гистограмы  
