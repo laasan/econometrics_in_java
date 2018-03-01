@@ -1,6 +1,5 @@
 # vizualization
-примеры визуализации чего-либо  
-ChartExamples.java - различные графики:  
+ChartExamples.java - примеры визуализации чего-либо, различные графики:  
 >simpleIndexChart - линия  
 >simpleBarChartByCountry - бар по одному параметру  
 >simpleBarChartByYear - бар по другому параметру  
