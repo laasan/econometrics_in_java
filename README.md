@@ -8,3 +8,5 @@ ChartExamples.java - примеры визуализации чего-либо, 
 >sampleScatterChart - диаграмма точек(рассеяния)  
 >histogramSample - пример гистограмы  
 >sampleBubbleChart - пузырьковая диаграма  
+
+# mathStat  
